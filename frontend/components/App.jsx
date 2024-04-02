@@ -3,7 +3,7 @@ export default function App({ home }) {
 
   return (
     <div className="tw-text-5xl tw-text-red-600">
-      Hello From React!
+      Hello From React! test
     </div>
   )
 }

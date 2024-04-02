@@ -1,3 +1,27 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
+name = "react-app-test"
+client_id = "774f665c8c46ba5699dffcb0172bd7cb"
+application_url = "https://priorities-boutique-foot-lessons.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://priorities-boutique-foot-lessons.trycloudflare.com/auth/callback",
+  "https://priorities-boutique-foot-lessons.trycloudflare.com/auth/shopify/callback",
+  "https://priorities-boutique-foot-lessons.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "cantoncode.myshopify.com"
