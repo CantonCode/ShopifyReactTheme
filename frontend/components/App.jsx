@@ -18,7 +18,7 @@ export default function App({ home }) {
           variant="outline-light"
           checked={ weaponType == 'spear'}
           value='spear'
-          style={{height:'100%',width:'100%'}}
+          style={{height:'100%',width:'100%',borderColor:"lightgrey"}}
           onChange={(e) => setWeaponType(e.currentTarget.value)}
         >
           <img style={{}}src='https://cdn-icons-png.freepik.com/512/5778/5778627.png'></img>
@@ -30,10 +30,10 @@ export default function App({ home }) {
           variant="outline-light"
           checked={ weaponType == 'knife'}
           value='knife'
-          style={{height:'100%',width:'100%'}}
+          style={{height:'100%',width:'100%',borderColor:"lightgrey"}}
           onChange={(e) => setWeaponType(e.currentTarget.value)}
         >
-          <img style={{height:'100%'}}src='https://parspng.com/wp-content/uploads/2022/07/knifepng.parspng.com-8.png'></img>
+          <img style={{height:'100%'}}src='https://www.pngall.com/wp-content/uploads/15/Bow-Arrow-PNG-Images.png'></img>
         
         </ToggleButton>
         
