@@ -2,7 +2,7 @@
 
 client_id = "774f665c8c46ba5699dffcb0172bd7cb"
 name = "react-app-test"
-application_url = "https://requesting-conclude-novelty-plates.trycloudflare.com"
+application_url = "https://iv-comprehensive-tuner-migration.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://requesting-conclude-novelty-plates.trycloudflare.com/auth/callback",
-  "https://requesting-conclude-novelty-plates.trycloudflare.com/auth/shopify/callback",
-  "https://requesting-conclude-novelty-plates.trycloudflare.com/api/auth/callback"
+  "https://iv-comprehensive-tuner-migration.trycloudflare.com/auth/callback",
+  "https://iv-comprehensive-tuner-migration.trycloudflare.com/auth/shopify/callback",
+  "https://iv-comprehensive-tuner-migration.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
