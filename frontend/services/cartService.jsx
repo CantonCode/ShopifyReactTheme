@@ -6,16 +6,21 @@ const fetchCart = async () => {
     return cart;
 }
 
-const updateCartAttributes = async (cartData) => {
-    await fetch(window.Shopify.routes.root + 'cart/add.js', {
+const updateCartAttributes =(weapon) => {
+    console.log(weapon);
+    fetch(window.Shopify.routes.root + 'cart/update.js', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(cartData)
+        body: JSON.stringify({
+                "attributes":{
+                  "selected_weapon":weapon
+               }
+            })
     })
         .then(response => {
-            return response.json();
+            return response.json()
         })
         .catch((error) => {
             console.error('Error:', error);

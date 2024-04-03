@@ -1,11 +1,26 @@
 import { Card, Stack, ToggleButton } from 'react-bootstrap'
 import { useState,useEffect } from 'react';
-import { fetchCart } from '../services/cartService';
+import { fetchCart,updateCartAttributes } from '../services/cartService';
+
 
 
 export default function App({ home }) {
-  const [weaponType, setWeaponType] = useState('');
+  const [weaponType, setWeaponType] = useState("null");
   const [cart, setCart] = useState([]);
+
+  const updateDB = async (value) =>{
+    console.log("Value is:",value)
+    switch (value) {
+      case "spear":
+        setWeaponType("spear");
+        
+      case "knife":
+        setWeaponType("knife")
+        
+    }
+    updateCartAttributes(value)
+    
+  };
   
   useEffect(() => {
     async function getCart() {
@@ -13,9 +28,10 @@ export default function App({ home }) {
       setCart(fetchedData);
     }
     getCart();
+    
   }, []);
 
-  console.log(cart);
+  console.log(cart)
 
   return (
     <div className="tw-text-5xl">
@@ -30,9 +46,9 @@ export default function App({ home }) {
               type="checkbox"
               variant="outline-light"
               checked={weaponType == 'spear'}
-              value='spear'
+              value="spear"
               style={{ height: '100%', width: '100%', borderColor: "lightgrey" }}
-              onChange={(e) => setWeaponType(e.currentTarget.value)}
+              onChange={(e) => updateCartAttributes(e.currentTarget.value)}
             >
               <img style={{}} src='https://cdn-icons-png.freepik.com/512/5778/5778627.png'></img>
             </ToggleButton>
@@ -42,9 +58,9 @@ export default function App({ home }) {
               type="checkbox"
               variant="outline-light"
               checked={weaponType == 'knife'}
-              value='knife'
+              value="knife"
               style={{ height: '100%', width: '100%', borderColor: "lightgrey" }}
-              onChange={(e) => setWeaponType(e.currentTarget.value)}
+              onChange={(e) => updateCartAttributes(e.currentTarget.value)}
             >
               <img style={{ height: '100%' }} src='https://www.pngall.com/wp-content/uploads/15/Bow-Arrow-PNG-Images.png'></img>
 
